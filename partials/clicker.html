@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html data-ng-app="stofstik-app">
+
+<head>
+    <title>WELCOME</title>
+</head>
+
+<body>
+    <div>
+        Name:
+        <input type="text" data-ng-model="inputName" /> {{ inputName }}
+        <br />
+        <br />
+        <button type="button" data-ng-model="input.button" data-ng-click="incClicks()">total clicks: {{totalClicks}}</button>
+        <br />
+        <br />
+        <li data-ng-repeat="person in persons | orderBy:'name'">
+            {{person.name}} has {{person.name.length}} {{person.name.length > 1 ? "characters" : "character"}} and clicked {{person.clicks}} {{person.clicks > 1 ? "times" : "time"}}
+        </li>
+        <br /> Amount of list items: {{ persons.length }}
+    </div>
+</body>
+
+</html>
